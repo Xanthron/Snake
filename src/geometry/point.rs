@@ -4,7 +4,7 @@ use std::{
     ops::{Add, Div, Mul, Sub},
 };
 
-#[derive(Clone, Copy)]
+#[derive(Clone, Copy, PartialEq, Debug)]
 pub struct Point {
     pub x: i32,
     pub y: i32,
@@ -54,8 +54,8 @@ impl Div<i32> for Point {
     }
 }
 
-impl PartialEq for Point {
-    fn eq(&self, other: &Self) -> bool {
-        return self.x == other.x && self.y == other.y;
-    }
-}
+// impl PartialEq for Point {
+//     fn eq(&self, other: &Self) -> bool {
+//         return self.x == other.x && self.y == other.y;
+//     }
+// }
